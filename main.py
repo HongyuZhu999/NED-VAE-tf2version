@@ -112,7 +112,7 @@ def main(beta, type_model):
             for k in range(adj_train.shape[2]):
                 adj_label[i][j][k][int(adj_orig[i][j][k])] = 1
 
-    tf.compat.v1.disable_eager_execution()  # change by HongyuZhu
+    tf.compat.v1.disable_eager_execution()
     placeholders = {
             'features': tf.compat.v1.placeholder(tf.float32, [FLAGS.batch_size, node.shape[1],
                                                               node.shape[2], node.shape[3]]),
